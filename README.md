@@ -4,6 +4,11 @@ by Butterfish
 *For those of us that play RimWorld like The Sims, but with ~~more~~ equal amounts of murder.*
 <br><br>
 
+## Download
+GitHub: https://github.com/TheButterfish/HairModdingPlus/releases/latest
+Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2114832515
+<br><br>
+
 ## Description
 _**TLDR: This mod gives modders the ability to have a hair texture render behind a pawn, as well as use alpha masks on hair, without additional fiddling with XML.**_
 
