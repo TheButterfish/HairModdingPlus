@@ -54,6 +54,10 @@ To apply an alpha mask to a hair texture, simply add "m" to the end of your mask
 **West or east masks will NOT be automatically flipped if only one is provided.** This is intentional, to allow modders to make asymmetrical hairs if they wish. To have a mask be used for both east and west sides, just make a copy of it and rename the copy accordingly i.e "name_eastm.png" and "name_westm.png".
 <br><br>
 
+### Examples
+Download [HairSamples.zip](https://github.com/TheButterfish/HairModdingPlus/blob/master/HairSamples.zip) from this repo to see working examples (includes the hair shown above).
+<br><br>
+
 ## Credits
 Andreas Pardeike, for creating [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077)<br>
 Killface, for a code snippet I borrowed from his [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128) mod<br>
