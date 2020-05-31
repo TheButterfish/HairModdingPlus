@@ -8,7 +8,7 @@ by Butterfish
 GitHub: https://github.com/TheButterfish/HairModdingPlus/releases/latest<br>
 Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2114832515<br>
 Nexus: https://www.nexusmods.com/rimworld/mods/339<br>
-ModDB: moddb.com/mods/hair-modding-plus
+ModDB: https://www.moddb.com/mods/hair-modding-plus/
 <br><br>
 
 ## Description
