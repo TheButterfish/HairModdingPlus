@@ -5,7 +5,7 @@ by Butterfish
 <br><br>
 
 ## Download
-GitHub: https://github.com/TheButterfish/HairModdingPlus/releases/latest
+GitHub: https://github.com/TheButterfish/HairModdingPlus/releases/latest<br>
 Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2114832515
 <br><br>
 
