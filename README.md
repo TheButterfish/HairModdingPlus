@@ -23,7 +23,7 @@ What's more, you don't even have to add more information to your HairDef XML, ju
 <br><br>
 
 ## Dependencies
-You'll need Harmony to use this mod. Get it at [GitHub](https://github.com/pardeike/HarmonyRimWorld/releases) or [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077).
+You'll need Harmony to use this mod. Get it at [GitHub](https://github.com/pardeike/HarmonyRimWorld/releases/latest) or [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077).
 <br><br>
 
 ## Compatibility
