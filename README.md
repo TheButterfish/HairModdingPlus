@@ -62,4 +62,4 @@ Download [HairSamples.zip](https://github.com/TheButterfish/HairModdingPlus/blob
 Andreas Pardeike, for creating [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077)<br>
 Killface, for a code snippet I borrowed from his [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128) mod<br>
 The various contributors to the [RimWorld modding wiki](https://rimworldwiki.com/wiki/Modding_Tutorials)<br>
-Tynan Sylvester, for ~~stealing my time and money~~ creating RimWorld
+Tynan Sylvester, for ~~stealing my time and money~~ creating [RimWorld](https://en.wikipedia.org/wiki/Cocaine)
