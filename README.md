@@ -64,7 +64,7 @@ Download [HairSamples.zip](https://github.com/TheButterfish/HairModdingPlus/blob
 <br><br>
 
 ## Licensing
-If you wish to improve, fork, add patches, borrow code snippets, or take over if I go on hiatus, go ahead. Just mention me in the credits and you're good to go.
+If you wish to improve, fork, add patches, borrow code snippets, include in a modpack, or take over if I go on hiatus, go ahead. Just mention me in the credits and you're good to go.
 <br><br>
 
 ## Credits
