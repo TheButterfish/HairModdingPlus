@@ -58,6 +58,10 @@ To apply an alpha mask to a hair texture, simply add "m" to the end of your mask
 Download [HairSamples.zip](https://github.com/TheButterfish/HairModdingPlus/blob/master/HairSamples.zip) from this repo to see working examples (includes the hair shown above).
 <br><br>
 
+## Licensing
+If you wish to improve, fork, add patches, borrow code snippets, or take over if I go on hiatus, go ahead. Just mention me in the credits and you're good to go.
+<br><br>
+
 ## Credits
 Andreas Pardeike, for creating [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077)<br>
 Killface, for a code snippet I borrowed from his [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128) mod<br>
