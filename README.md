@@ -33,7 +33,7 @@ You'll need Harmony to use this mod. Get it at [GitHub](https://github.com/parde
 Should be compatible with most mods, unless they skip RenderPawnInternal or ResolveAllGraphics.<br>
 
 Patched to be compatible with [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128) and [Gradient Hair](https://steamcommunity.com/sharedfiles/filedetails/?id=1687053679).<br>
-Also makes those two mods compatible with each other.
+Also makes those two mods compatible with each other.<br>
 Secondary hair color is selectable with [Prepare Carefully](https://steamcommunity.com/sharedfiles/filedetails/?id=735106432) (select "Hair Color 2" from the dropdown).
 
 Safe to add or remove from existing saves.
