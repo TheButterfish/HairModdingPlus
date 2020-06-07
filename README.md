@@ -16,7 +16,7 @@ _**TLDR: This mod gives modders the ability to have a hair texture render behind
 
 If you've made/tried to make a hair mod, you'll likely realize that RimWorld just slaps the texture on top of the pawn, colors the entire thing, and calls it a day.<br>
 This mod gives modders an additional hair layer to work with that renders behind the pawn. So you'll be able to make, for example, long hair that flows down the back, without having to tailor-make it for one/each body type or make design compromises.<br>
-In addition, this mod also enables the use of alpha masks on hair, so you can make hair with decorations/accessories that can be recolored seperately.<br>
+In addition, this mod also enables the use of alpha masks on hair, so you can make hair with decorations/accessories that can be colored seperately in-game.<br>
 What's more, you don't even have to add more information to your HairDef XML, just provide the textures and you're done.
 
 ![Hair That Actually Fits All](https://raw.githubusercontent.com/TheButterfish/HairModdingPlus/master/ReadmeImages/sample.jpg)
