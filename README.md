@@ -21,7 +21,8 @@ What's more, you don't even have to add more information to your HairDef XML, ju
 
 ![Hair That Actually Fits All](https://raw.githubusercontent.com/TheButterfish/HairModdingPlus/master/ReadmeImages/sample.jpg)
 
-*Note: This mod will not magically convert existing hair to work as above. You'll have to get hair from other mods made with this mod in mind. I myself am in the process of making one, releasing Soon<sup>TM</sup>.*
+*Note: This mod will not magically convert existing hair to work as above. You'll have to get hair from other mods made with this mod in mind. I myself am in the process of making one, releasing Soon<sup>TM</sup>.*<br>
+*Note 2: Gradient hair shown above is from [Gradient Hair](https://steamcommunity.com/sharedfiles/filedetails/?id=1687053679)*
 <br><br>
 
 ## Dependencies
