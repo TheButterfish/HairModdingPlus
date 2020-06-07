@@ -55,6 +55,7 @@ To have a texture render behind the pawn, simply add "\_back" to the end of your
 *For more information on alpha masks, check [this guide](https://github.com/seraphile/rimshare/wiki/Colouring-in-Images) out.*
 
 To apply an alpha mask to a hair texture, simply add "m" to the end of your mask's file name. This works for both front textures and back textures.<br>
+Areas marked red (#FF0000) will be painted with the primary color, areas marked green (#00FF00) will be painted with the secondary color, and areas marked black (#000000) will not be painted.<br>
 ![](https://raw.githubusercontent.com/TheButterfish/HairModdingPlus/master/ReadmeImages/addmask.jpg)
 
 "demo_southm.png" is the mask that will be applied to "demo_south.png", and "demo_south_backm.png" will be applied to "demo_south_back.png". Masks are optional, textures without a corresponding "m.png" will display as they usually would.
