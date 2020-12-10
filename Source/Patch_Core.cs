@@ -146,6 +146,14 @@ namespace ButterfishHairModdingPlus
             if (HarmonyPatches_BHair.colonistBarFirstDraw)
             {
                 __instance.MarkColonistsDirty();
+
+                List<Pawn> pawnList = __instance.GetColonistsInOrder();
+                foreach (Pawn pawn in pawnList)
+                {
+                    pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+                    PortraitsCache.SetDirty(pawn);
+                }
+                
                 HarmonyPatches_BHair.colonistBarFirstDraw = false;
             }
         }
