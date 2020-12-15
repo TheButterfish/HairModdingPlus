@@ -21,7 +21,13 @@ What's more, you don't even have to add more information to your HairDef XML, ju
 
 ![Hair That Actually Fits All](https://raw.githubusercontent.com/TheButterfish/HairModdingPlus/master/ReadmeImages/sample.jpg)
 
-*Note: This mod will not magically convert existing hair to work as above. You'll have to get hair from other mods made with this mod in mind. I myself am in the process of making one, releasing Soon<sup>TM</sup>.*<br>
+*Note: This mod will not magically convert existing hair to work as above. You'll have to get hair from other mods that utilize this mod. Below are a few examples of such hair mods:*
+- [Roo's Accessory Hairstyles](https://steamcommunity.com/sharedfiles/filedetails/?id=1991452568)
+- [Roo's Royalty Hairstyles](https://steamcommunity.com/sharedfiles/filedetails/?id=2120391876)
+- [RimNGE](https://steamcommunity.com/sharedfiles/filedetails/?id=1687909697)
+- [Hamefura](https://steamcommunity.com/sharedfiles/filedetails/?id=2317290564)
+- [Absolute Legends Hair](https://steamcommunity.com/sharedfiles/filedetails/?id=2195744587)<br>
+
 *Note 2: Gradient hair shown above is from [Gradient Hair](https://steamcommunity.com/sharedfiles/filedetails/?id=1687053679).*
 <br><br>
 
