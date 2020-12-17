@@ -72,7 +72,10 @@ Areas marked red (#FF0000) will be painted with the primary color, areas marked 
 <br><br>
 
 ### Examples
-Download [HairSamples.zip](https://github.com/TheButterfish/HairModdingPlus/blob/master/HairSamples.zip) from this repo to see working examples (includes the hair shown above).
+Download the demo hair mod from a source below to see working examples (includes the hair shown above):<br>
+Github: https://github.com/TheButterfish/HairModdingPlus/blob/master/ButterfishHairModdingPlusHairSamples.zip<br>
+Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2324262910<br>
+or try out one of the mods mentioned under Description above.
 <br><br>
 
 ## Licensing
