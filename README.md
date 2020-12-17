@@ -85,6 +85,6 @@ If you wish to improve, fork, add patches, borrow code snippets, include in a mo
 ## Credits
 Andreas Pardeike, for creating [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077)<br>
 Killface, for a code snippet I borrowed from his [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128) mod<br>
-sumghai, for contributing some hair samples for the demo mod.
+sumghai, for contributing some hair samples for the demo mod<br>
 The various contributors to the [RimWorld modding wiki](https://rimworldwiki.com/wiki/Modding_Tutorials)<br>
 Tynan Sylvester, for ~~stealing my time and money~~ creating [RimWorld](https://en.wikipedia.org/wiki/Cocaine)
