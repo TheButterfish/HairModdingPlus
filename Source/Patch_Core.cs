@@ -49,7 +49,7 @@ namespace ButterfishHairModdingPlus
                     if (otherPawn == pawn) { continue; }
                     if (otherPawn.DrawPos.x < loc.x - 0.5f) { continue; }
                     if (otherPawn.DrawPos.x > loc.x + 0.5f) { continue; }
-                    if (otherPawn.DrawPos.z >= loc.z) { continue; }
+                    if (otherPawn.DrawPos.z <= loc.z) { continue; }
 
                     pawns.Add(otherPawn);
                 }
