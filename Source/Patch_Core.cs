@@ -2,15 +2,26 @@
 using UnityEngine;
 using Verse;
 using RimWorld;
+using HarmonyLib;
 
 namespace ButterfishHairModdingPlus
 {
     class Patch_Core
     {
+        [HarmonyAfter(new string[]{"babies.and.children.continued"})]
         public static void UseModifiedGraphicParams(PawnGraphicSet __instance)
         {
             if (__instance.pawn.RaceProps.Humanlike)
             {
+                if (HarmonyPatches_BHair.loadedBabiesAndChildren)
+                {
+                    if (Compat_BabiesAndChildren.BCCompat_TryCheckYoungerThanChild(__instance.pawn))
+                    {
+                        __instance.hairGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Pawn/Humanlike/null", ShaderDatabase.Cutout, Vector2.one, Color.white);
+                        return;
+                    }
+                }
+
                 string hairTexturePath = __instance.pawn.story.hairDef.texPath;
 
                 HairColor2_Comp comp = __instance.pawn.GetComp<HairColor2_Comp>();
@@ -31,7 +42,9 @@ namespace ButterfishHairModdingPlus
             }
         }
 
-        //credits to Killface for this snippet of code
+        //credits to Killface for the basis of this snippet of code
+        //IMPORTANT: In RimWorld, the "y" variable refers to depth, not height/vertical axis.
+        //           Instead, height/vertical axis is stored in "z" variable.
         public static void RecalcRootLocY(PawnRenderer __instance, ref Vector3 rootLoc, bool portrait)
         {
             Pawn pawn = __instance.graphics.pawn;
@@ -64,6 +77,7 @@ namespace ButterfishHairModdingPlus
             }
         }
 
+        [HarmonyAfter(new string[] { "babies.and.children.continued" })]
         public static void DrawBackHairLayer(PawnRenderer __instance,
                                              ref Vector3 rootLoc,
                                              ref float angle,
@@ -123,7 +137,19 @@ namespace ButterfishHairModdingPlus
                         }
                         Material resultMat = graphics.flasher.GetDamagedMat(hairMat);
 
-                        GenDraw.DrawMeshNowOrLater(graphics.HairMeshSet.MeshAt(headFacing), mat: resultMat, loc: loc2, quat: quaternion, drawNow: portrait);
+                        Mesh hairMesh;
+                        if (HarmonyPatches_BHair.loadedAlienRace)
+                        {
+                            //use modified hair mesh after processed by Alien Race/Babies And Children
+                            hairMesh = Patch_AlienRace.ARCompat_GetCopiedMesh();
+                        }
+                        else
+                        {
+                            //default
+                            hairMesh = graphics.HairMeshSet.MeshAt(headFacing);
+                        }
+
+                        GenDraw.DrawMeshNowOrLater(mesh: hairMesh, mat: resultMat, loc: loc2, quat: quaternion, drawNow: portrait);
                     }
                 }
             }

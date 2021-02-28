@@ -11,6 +11,8 @@ namespace ButterfishHairModdingPlus
     [StaticConstructorOnStartup]
     public class HarmonyPatches_BHair
     {
+        public static bool loadedAlienRace = false;
+        public static bool loadedBabiesAndChildren = false;
         public static bool loadedGradientHair = false;
         public static bool colonistBarFirstDraw = true;
 
@@ -80,6 +82,29 @@ namespace ButterfishHairModdingPlus
                 }))();
             }
             catch (TypeLoadException) { }
+
+            try
+            {
+                ((Action)(() =>
+                {
+                    if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "erdelf.humanoidalienraces"))
+                    {
+                        loadedAlienRace = true;
+
+                        harmony.Patch(original: AccessTools.Method(type: typeof(AlienRace.HarmonyPatches),
+                                                                   name: "GetPawnHairMesh"),
+                                      prefix: null,
+                                      postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Patch_AlienRace),
+                                                                 methodName: "ARCompat_CopyModifiedPawnHairMesh"));
+                    }
+                }))();
+            }
+            catch (TypeLoadException) { }
+
+            if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "babies.and.children.continued"))
+            {
+                loadedBabiesAndChildren = true;
+            }
 
             try
             {

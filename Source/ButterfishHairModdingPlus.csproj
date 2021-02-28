@@ -36,10 +36,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\__LocalCopy_Harmony_-21-10\Current\Assemblies\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="AlienRace, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\AlienRace.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>True</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="BabiesAndChildren, Version=1.0.7702.36883, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\BabiesAndChildren.dll</HintPath>
     </Reference>
     <Reference Include="EdBPrepareCarefully, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -74,6 +82,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compat_BabiesAndChildren.cs" />
     <Compile Include="Compat_GradientHair.cs" />
     <Compile Include="HairColor2_API.cs" />
     <Compile Include="HairColor2_Comp.cs" />
@@ -84,6 +93,7 @@
     <Compile Include="Graphic_Multi_BHair.cs" />
     <Compile Include="Patch_Core.cs" />
     <Compile Include="Patch_FacialStuff.cs" />
+    <Compile Include="Patch_AlienRace.cs" />
     <Compile Include="Patch_PrepareCarefully.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities_Texture2D.cs" />
