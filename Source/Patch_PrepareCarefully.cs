@@ -9,7 +9,7 @@ namespace ButterfishHairModdingPlus
     {
         public static IEnumerable<object> PC_hairOptions;
 
-        public static void PCCompat_AddHairColor2Layer(ref IEnumerable<object> __result)   //List<EdB.PrepareCarefully.PawnLayer> __ result
+        public static void PCCompat_AddHairColor2Layer(ref IEnumerable<object> __result)   //List<EdB.PrepareCarefully.PawnLayer> __result
         {
             Type t_PawnLayer = GenTypes.GetTypeInAnyAssembly("EdB.PrepareCarefully.PawnLayer");
             try

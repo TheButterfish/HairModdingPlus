@@ -56,6 +56,12 @@ namespace ButterfishHairModdingPlus
                                                                  methodName: "PCCompat_AddHairColor2Layer"));
 
                         harmony.Patch(original: AccessTools.Method(type: typeof(EdB.PrepareCarefully.ProviderPawnLayers),
+                                                                   name: "InitializeAlienPawnLayers"),
+                                      prefix: null,
+                                      postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Patch_PrepareCarefully),
+                                                                 methodName: "PCCompat_AddHairColor2Layer"));
+
+                        harmony.Patch(original: AccessTools.Method(type: typeof(EdB.PrepareCarefully.ProviderPawnLayers),
                                                                    name: "InitializeHairOptions"),
                                       prefix: null,
                                       postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Patch_PrepareCarefully),

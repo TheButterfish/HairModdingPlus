@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HarmonyLib;
 using UnityEngine;
 using Verse;
-using GradientHair;
 
 namespace ButterfishHairModdingPlus
 {
@@ -19,10 +13,10 @@ namespace ButterfishHairModdingPlus
             {
                 if (t_CompGradientHair != null)
                 {
-                    CompGradientHair comp = pawn.GetComp<CompGradientHair>();
+                    GradientHair.CompGradientHair comp = pawn.GetComp<GradientHair.CompGradientHair>();
                     if (comp != null)
                     {
-                        GradientHairSettings settings = comp.Settings;
+                        GradientHair.GradientHairSettings settings = comp.Settings;
                         if (settings.enabled)
                         {
                             return (':' + settings.mask);
@@ -42,10 +36,10 @@ namespace ButterfishHairModdingPlus
             {
                 if (t_CompGradientHair != null)
                 {
-                    CompGradientHair comp = pawn.GetComp<CompGradientHair>();
+                    GradientHair.CompGradientHair comp = pawn.GetComp<GradientHair.CompGradientHair>();
                     if (comp != null)
                     {
-                        GradientHairSettings settings = comp.Settings;
+                        GradientHair.GradientHairSettings settings = comp.Settings;
                         if (settings.enabled)
                         {
                             return (settings.colorB);

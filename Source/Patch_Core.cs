@@ -15,7 +15,7 @@ namespace ButterfishHairModdingPlus
             {
                 if (HarmonyPatches_BHair.loadedBabiesAndChildren)
                 {
-                    if (Compat_BabiesAndChildren.BCCompat_TryCheckYoungerThanChild(__instance.pawn))
+                    if (Compat_BabiesAndChildren.BCCompat_IsYoungerThanChild(__instance.pawn))
                     {
                         __instance.hairGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Pawn/Humanlike/null", ShaderDatabase.Cutout, Vector2.one, Color.white);
                         return;
