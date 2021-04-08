@@ -12,6 +12,7 @@ namespace ButterfishHairModdingPlus
     public class HarmonyPatches_BHair
     {
         public static bool loadedAlienRace = false;
+        public static bool loadedRimWorldChildren = false;
         public static bool loadedBabiesAndChildren = false;
         public static bool loadedGradientHair = false;
         public static bool colonistBarFirstDraw = true;
@@ -102,6 +103,24 @@ namespace ButterfishHairModdingPlus
                                       prefix: null,
                                       postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Patch_AlienRace),
                                                                  methodName: "ARCompat_CopyModifiedPawnHairMesh"));
+                    }
+                }))();
+            }
+            catch (TypeLoadException) { }
+
+            try
+            {
+                ((Action)(() =>
+                {
+                    if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "children.and.pregnancy"))
+                    {
+                        loadedRimWorldChildren = true;
+
+                        harmony.Patch(original: AccessTools.Method(type: typeof(RimWorldChildren.PawnRenderer_RenderPawnInternal_Patch),
+                                                                   name: "GetHairMesh"),
+                                      prefix: null,
+                                      postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Compat_RimWorldChildren),
+                                                                 methodName: "RCCompat_CopyModifiedPawnHairMesh"));
                     }
                 }))();
             }

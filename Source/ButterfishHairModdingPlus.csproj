@@ -61,6 +61,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\__LocalCopy_Gradient Hair_-21-10\1.2\Assemblies\GradientHair.dll</HintPath>
     </Reference>
+    <Reference Include="RimWorldChildren, Version=1.0.7578.37379, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\RimWorldChildren.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -82,7 +86,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compat_BabiesAndChildren.cs" />
+    <Compile Include="Patch_BabiesAndChildren.cs" />
     <Compile Include="Compat_GradientHair.cs" />
     <Compile Include="HairColor2_API.cs" />
     <Compile Include="HairColor2_Comp.cs" />
@@ -91,6 +95,7 @@
     <Compile Include="HairMasker.cs" />
     <Compile Include="HarmonyPatches_BHair.cs" />
     <Compile Include="Graphic_Multi_BHair.cs" />
+    <Compile Include="Compat_RimWorldChildren.cs" />
     <Compile Include="Patch_Core.cs" />
     <Compile Include="Patch_FacialStuff.cs" />
     <Compile Include="Patch_AlienRace.cs" />

@@ -8,14 +8,14 @@ namespace ButterfishHairModdingPlus
 {
     class Patch_Core
     {
-        [HarmonyAfter(new string[]{"babies.and.children.continued"})]
+        [HarmonyAfter(new string[] { "babies.and.children.continued", "children.and.pregnancy" })]
         public static void UseModifiedGraphicParams(PawnGraphicSet __instance)
         {
             if (__instance.pawn.RaceProps.Humanlike)
             {
                 if (HarmonyPatches_BHair.loadedBabiesAndChildren)
                 {
-                    if (Compat_BabiesAndChildren.BCCompat_IsYoungerThanChild(__instance.pawn))
+                    if (Patch_BabiesAndChildren.BCCompat_IsYoungerThanChild(__instance.pawn))
                     {
                         __instance.hairGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Pawn/Humanlike/null", ShaderDatabase.Cutout, Vector2.one, Color.white);
                         return;
@@ -45,6 +45,7 @@ namespace ButterfishHairModdingPlus
         //credits to Killface for the basis of this snippet of code
         //IMPORTANT: In RimWorld, the "y" variable refers to depth, not height/vertical axis.
         //           Instead, height/vertical axis is stored in "z" variable.
+        [HarmonyAfter(new string[] { "children.and.pregnancy" })]
         public static void RecalcRootLocY(PawnRenderer __instance, ref Vector3 rootLoc, bool portrait)
         {
             Pawn pawn = __instance.graphics.pawn;
@@ -77,7 +78,7 @@ namespace ButterfishHairModdingPlus
             }
         }
 
-        [HarmonyAfter(new string[] { "babies.and.children.continued" })]
+        [HarmonyAfter(new string[] { "babies.and.children.continued", "children.and.pregnancy" })]
         public static void DrawBackHairLayer(PawnRenderer __instance,
                                              ref Vector3 rootLoc,
                                              ref float angle,
@@ -137,18 +138,29 @@ namespace ButterfishHairModdingPlus
                         }
                         Material resultMat = graphics.flasher.GetDamagedMat(hairMat);
 
-                        Mesh hairMesh;
+                        Mesh hairMesh = null;
                         if (HarmonyPatches_BHair.loadedAlienRace)
                         {
                             //use modified hair mesh after processed by Alien Race/Babies And Children
                             hairMesh = Patch_AlienRace.ARCompat_GetCopiedMesh();
                         }
-                        else
+
+                        if (HarmonyPatches_BHair.loadedRimWorldChildren)
+                        {
+                            //use modified hair mesh after processed by RimWorldChildren
+                            hairMesh = Compat_RimWorldChildren.RCCompat_GetCopiedMesh();
+                            resultMat = Compat_RimWorldChildren.RCCompat_ModifyHairForChild(resultMat, graphics.pawn);
+
+                            //alternate calling method for manual calling
+                            //hairMesh = Compat_RimWorldChildren.RCCompat_GetModifiedPawnHairMesh(graphics, graphics.pawn, headFacing);
+                        }
+
+                        if (hairMesh == null)
                         {
                             //default
                             hairMesh = graphics.HairMeshSet.MeshAt(headFacing);
                         }
-
+                        
                         GenDraw.DrawMeshNowOrLater(mesh: hairMesh, mat: resultMat, loc: loc2, quat: quaternion, drawNow: portrait);
                     }
                 }
