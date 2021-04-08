@@ -42,7 +42,7 @@ Patched to be compatible with:
 * [Babies And Children 1.2](https://steamcommunity.com/sharedfiles/filedetails/?id=2373187996)
 * [Children and Pregnancy 1.2](https://ludeon.com/forums/index.php?topic=51258.0)
 * [Humanoid Alien Races 2.0](https://steamcommunity.com/sharedfiles/filedetails/?id=839005762), but needs more testing.
-* [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128), but since it has not been updated for 1.2 your mileage may vary.<br>
+* [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128), but since it has not been updated for 1.2 your mileage may vary<br>
 
 Secondary hair color is selectable with Prepare Carefully (select "Hair Color 2" from the dropdown).
 
