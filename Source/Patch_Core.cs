@@ -111,11 +111,9 @@ namespace ButterfishHairModdingPlus
                     //loc2.y -= 0.0303030312f;    //changed from original, used to be +=
 
 
-                    bool flag = false;
+                    bool hideHair = false;
                     if (!portrait || !Prefs.HatsOnlyOnMap)
                     {
-
-                        //-------------------------REPLICATED VANILLA CODE-------------------------
                         List<ApparelGraphicRecord> apparelGraphics = graphics.apparelGraphics;
                         for (int j = 0; j < apparelGraphics.Count; j++)
                         {
@@ -123,14 +121,24 @@ namespace ButterfishHairModdingPlus
                             {
                                 if (!apparelGraphics[j].sourceApparel.def.apparel.hatRenderedFrontOfFace)
                                 {
-                                    flag = true;
+                                    if (HarmonyPatches_BHair.loadedShowHair)
+                                    {
+                                        hideHair = Compat_ShowHair.SHCompat_ShouldHideHair(graphics.pawn, apparelGraphics[j].sourceApparel.def, portrait);
+                                    }
+                                    else if (HarmonyPatches_BHair.loadedHatDisplaySelection)
+                                    {
+                                        hideHair = Compat_HatDisplaySelection.HDCompat_ShouldHideHair(graphics.pawn, apparelGraphics[j].sourceApparel.def.defName);
+                                    }
+                                    else
+                                    {
+                                        hideHair = true;
+                                    }
                                 }
                             }
                         }
-                        //-------------------------REPLICATED VANILLA CODE-------------------------
-
                     }
-                    if (!flag && bodyDrawType != RotDrawMode.Dessicated && !headStump)
+
+                    if (!hideHair && bodyDrawType != RotDrawMode.Dessicated && !headStump)
                     {
                         if (graphics.pawn.IsInvisible())
                         {
@@ -148,8 +156,8 @@ namespace ButterfishHairModdingPlus
                         if (HarmonyPatches_BHair.loadedRimWorldChildren)
                         {
                             //use modified hair mesh after processed by RimWorldChildren
-                            hairMesh = Compat_RimWorldChildren.RCCompat_GetCopiedMesh();
-                            resultMat = Compat_RimWorldChildren.RCCompat_ModifyHairForChild(resultMat, graphics.pawn);
+                            hairMesh = Patch_RimWorldChildren.RCCompat_GetCopiedMesh();
+                            resultMat = Patch_RimWorldChildren.RCCompat_ModifyHairForChild(resultMat, graphics.pawn);
 
                             //alternate calling method for manual calling
                             //hairMesh = Compat_RimWorldChildren.RCCompat_GetModifiedPawnHairMesh(graphics, graphics.pawn, headFacing);

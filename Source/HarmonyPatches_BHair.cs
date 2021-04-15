@@ -15,12 +15,15 @@ namespace ButterfishHairModdingPlus
         public static bool loadedRimWorldChildren = false;
         public static bool loadedBabiesAndChildren = false;
         public static bool loadedGradientHair = false;
+        public static bool loadedShowHair = false;
+        public static bool loadedHatDisplaySelection = false;
+
         public static bool colonistBarFirstDraw = true;
 
         static HarmonyPatches_BHair()
         {
             Harmony harmony = new Harmony(id: "butterfish.hairmoddingplus");
-            //Harmony.DEBUG = true;
+            Harmony.DEBUG = true;
 
             /*foreach (ModContentPack mod in LoadedModManager.RunningModsListForReading)
             {
@@ -119,7 +122,7 @@ namespace ButterfishHairModdingPlus
                         harmony.Patch(original: AccessTools.Method(type: typeof(RimWorldChildren.PawnRenderer_RenderPawnInternal_Patch),
                                                                    name: "GetHairMesh"),
                                       prefix: null,
-                                      postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Compat_RimWorldChildren),
+                                      postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Patch_RimWorldChildren),
                                                                  methodName: "RCCompat_CopyModifiedPawnHairMesh"));
                     }
                 }))();
@@ -177,6 +180,16 @@ namespace ButterfishHairModdingPlus
                           prefix: null,
                           postfix: new HarmonyMethod(methodType: typeof(ButterfishHairModdingPlus.Patch_Core),
                                                      methodName: "OnLoadPortraitsBugfix"));
+            }
+
+            if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "showhair.kv.rw"))
+            {
+                loadedShowHair = true;
+            }
+
+            if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "velc.hatsdisplayselection"))
+            {
+                loadedHatDisplaySelection = true;
             }
         }
     }
