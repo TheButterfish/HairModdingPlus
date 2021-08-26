@@ -39,10 +39,13 @@ Should be compatible with most mods, unless they skip RenderPawnInternal or Reso
 Patched to be compatible with:
 * [Prepare Carefully](https://steamcommunity.com/sharedfiles/filedetails/?id=735106432)
 * [Gradient Hair](https://steamcommunity.com/sharedfiles/filedetails/?id=1687053679)
-* [Babies And Children 1.2](https://steamcommunity.com/sharedfiles/filedetails/?id=2373187996)
-* [Children and Pregnancy 1.2](https://ludeon.com/forums/index.php?topic=51258.0)
+* [Babies And Children 1.2](https://steamcommunity.com/sharedfiles/filedetails/?id=2373187996) by CentAtMoney
+* [Babies And Children 1.3](https://steamcommunity.com/sharedfiles/filedetails/?id=2559574784) by cometopapa
+* [[KV] Show Hair With Hats or Hide All Hats](https://steamcommunity.com/sharedfiles/filedetails/?id=1180826364)
+* [Hats Display Selection](https://steamcommunity.com/sharedfiles/filedetails/?id=1542291825)
 * [Humanoid Alien Races 2.0](https://steamcommunity.com/sharedfiles/filedetails/?id=839005762), but needs more testing.
-* [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128), but since it has not been updated for 1.2 your mileage may vary<br>
+* [Children and Pregnancy 1.2](https://ludeon.com/forums/index.php?topic=51258.0) (not yet updated for 1.3 at time of writing)
+* [Facial Stuff](https://steamcommunity.com/workshop/filedetails/?id=818322128) (not updated since 1.1, your mileage may vary)
 
 Secondary hair color is selectable with Prepare Carefully (select "Hair Color 2" from the dropdown).
 
