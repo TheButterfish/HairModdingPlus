@@ -11,6 +11,7 @@ namespace ButterfishHairModdingPlus
 {
     class Compat_ShowHair
     {
+        //OUTDATED, ONLY USE AS REFERENCE
         public static bool SHCompat_ShouldHideHair(Pawn pawn, ThingDef hat, bool portrait)
         {
             Type t_Settings = GenTypes.GetTypeInAnyAssembly("ShowHair.Settings");

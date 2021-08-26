@@ -11,7 +11,7 @@ namespace ButterfishHairModdingPlus
     {
         private static Mesh modifiedMesh_RimWorldChildren = null;
 
-        [HarmonyAfter(new string[] { "babies.and.children.continued" })]
+        [HarmonyAfter(new string[] { "children.and.pregnancy" })]
         public static void RCCompat_CopyModifiedPawnHairMesh(Mesh __result)
         {
             modifiedMesh_RimWorldChildren = __result;

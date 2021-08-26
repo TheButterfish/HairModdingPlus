@@ -9,14 +9,14 @@ namespace ButterfishHairModdingPlus
     {
         public static IEnumerable<object> PC_hairOptions;
 
-        public static void PCCompat_AddHairColor2Layer(ref IEnumerable<object> __result)   //List<EdB.PrepareCarefully.PawnLayer> __result
+        public static void PCCompat_AddHairColor2Layer(IEnumerable<object> __result)   //List<EdB.PrepareCarefully.PawnLayer> __result
         {
             Type t_PawnLayer = GenTypes.GetTypeInAnyAssembly("EdB.PrepareCarefully.PawnLayer");
             try
             {
                 if (t_PawnLayer != null)
                 {
-                    List<EdB.PrepareCarefully.PawnLayer> result_PawnLayer = (List<EdB.PrepareCarefully.PawnLayer>)__result;
+                    List<EdB.PrepareCarefully.PawnLayer> result_PawnLayer = (List<EdB.PrepareCarefully.PawnLayer>) __result;
                     EdB.PrepareCarefully.PawnLayer hairColor2Layer = new EdB.PrepareCarefully.PawnLayerHair() { Name = "Hair Color 2", Label = ("HairModdingPlus.PCPatch.HairColorTwo").Translate() };
                     hairColor2Layer.Options = (List<EdB.PrepareCarefully.PawnLayerOption>)PC_hairOptions;
                     PC_hairOptions = null;
@@ -26,12 +26,12 @@ namespace ButterfishHairModdingPlus
             catch (TypeLoadException) { }
         }
 
-        public static void PCCompat_GetHairOptions(ref IEnumerable<object> __result) //List<EdB.PrepareCarefully.PawnLayerOption> __result
+        public static void PCCompat_GetHairOptions(IEnumerable<object> __result) //List<EdB.PrepareCarefully.PawnLayerOption> __result
         {
             PC_hairOptions = __result;
         }
 
-        public static bool PCCompat_GetSelectedColor(object __instance, ref object pawn, ref Color __result)   //EdB.PrepareCarefully.PawnLayerHair __instance, ref EdB.PrepareCarefully.CustomPawn pawn
+        public static bool PCCompat_GetSelectedColor(object __instance, object pawn, ref Color __result)   //EdB.PrepareCarefully.PawnLayerHair __instance, ref EdB.PrepareCarefully.CustomPawn pawn
         {
             Type t_CustomPawn = GenTypes.GetTypeInAnyAssembly("EdB.PrepareCarefully.CustomPawn");
             try
@@ -39,7 +39,7 @@ namespace ButterfishHairModdingPlus
                 if (t_CustomPawn != null)
                 {
                     EdB.PrepareCarefully.PawnLayerHair this_PawnLayerHair = (EdB.PrepareCarefully.PawnLayerHair)__instance;
-                    EdB.PrepareCarefully.CustomPawn o_CustomPawn = (EdB.PrepareCarefully.CustomPawn)pawn;
+                    EdB.PrepareCarefully.CustomPawn o_CustomPawn = (EdB.PrepareCarefully.CustomPawn) pawn;
                     if (this_PawnLayerHair.Name == "Hair Color 2")
                     {
                         __result = HairColor2_API.GetHairColor2(o_CustomPawn.Pawn);
@@ -53,7 +53,7 @@ namespace ButterfishHairModdingPlus
             return true;
         }
 
-        public static bool PCCompat_SelectColor(object __instance, ref object pawn, Color color)   //EdB.PrepareCarefully.PawnLayerHair __instance, ref EdB.PrepareCarefully.CustomPawn pawn
+        public static bool PCCompat_SelectColor(object __instance, object pawn, Color color)   //EdB.PrepareCarefully.PawnLayerHair __instance, ref EdB.PrepareCarefully.CustomPawn pawn
         {
             Type t_CustomPawn = GenTypes.GetTypeInAnyAssembly("EdB.PrepareCarefully.CustomPawn");
             try
@@ -61,7 +61,7 @@ namespace ButterfishHairModdingPlus
                 if (t_CustomPawn != null)
                 {
                     EdB.PrepareCarefully.PawnLayerHair this_PawnLayerHair = (EdB.PrepareCarefully.PawnLayerHair)__instance;
-                    EdB.PrepareCarefully.CustomPawn o_CustomPawn = (EdB.PrepareCarefully.CustomPawn)pawn;
+                    EdB.PrepareCarefully.CustomPawn o_CustomPawn = (EdB.PrepareCarefully.CustomPawn) pawn;
                     if (this_PawnLayerHair.Name == "Hair Color 2")
                     {
                         HairColor2_API.SetHairColor2(o_CustomPawn.Pawn, color);

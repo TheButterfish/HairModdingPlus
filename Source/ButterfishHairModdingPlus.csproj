@@ -94,8 +94,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compat_HatDisplaySelection.cs" />
     <Compile Include="Compat_ShowHair.cs" />
+    <Compile Include="Patch_HatDisplaySelection.cs" />
+    <Compile Include="Patch_ShowHair.cs" />
     <Compile Include="Patch_BabiesAndChildren.cs" />
     <Compile Include="Compat_GradientHair.cs" />
     <Compile Include="HairColor2_API.cs" />

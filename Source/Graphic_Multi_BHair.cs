@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using GradientHair;
 using HarmonyLib;
@@ -11,11 +11,11 @@ namespace ButterfishHairModdingPlus
     {
         private Material[] matsBack = new Material[4];
 
-        public Material BackMatAt(Rot4 rot)
+        public Material BackMatAt(Rot4 facing)
         {
-            if (rot.AsInt >= 0 && rot.AsInt <= 3)
+            if (facing.AsInt >= 0 && facing.AsInt <= 3)
             {
-                return matsBack[rot.AsInt];
+                return matsBack[facing.AsInt];
             }
             else
             {

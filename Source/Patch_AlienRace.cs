@@ -8,17 +8,17 @@ namespace ButterfishHairModdingPlus
 {
     class Patch_AlienRace
     {
-        private static Mesh modifiedMesh_BabiesAndChildren = null;
+        private static Mesh modifiedMesh_AlienRaces = null;
 
         [HarmonyAfter(new string[] { "babies.and.children.continued" })]
         public static void ARCompat_CopyModifiedPawnHairMesh(Mesh __result)
         {
-            modifiedMesh_BabiesAndChildren = __result;
+            modifiedMesh_AlienRaces = __result;
         }
 
         public static Mesh ARCompat_GetCopiedMesh()
         {
-            return modifiedMesh_BabiesAndChildren;
+            return modifiedMesh_AlienRaces;
         }
     }
 }

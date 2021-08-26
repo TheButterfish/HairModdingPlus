@@ -12,7 +12,7 @@ namespace ButterfishHairModdingPlus
     {
         public static float tempBaseDrawLocY = 0;
 
-        public static void FSCompat_GetBaseDrawLocY(ref Vector3 rootLoc)
+        public static void FSCompat_GetBaseDrawLocY(Vector3 rootLoc)
         {
             tempBaseDrawLocY = rootLoc.y;
         }
@@ -21,8 +21,8 @@ namespace ButterfishHairModdingPlus
                                                       ref Vector3 hairLoc,
                                                       RotDrawMode bodyDrawType,
                                                       Quaternion headQuat,
-                                                      ref bool renderBody,
-                                                      ref bool portrait)
+                                                      bool renderBody,
+                                                      bool portrait)
         //FacialStuff.HumanHeadDrawer __instance
         {
             Type t_HumanHeadDrawer = GenTypes.GetTypeInAnyAssembly("FacialStuff.HumanHeadDrawer");
