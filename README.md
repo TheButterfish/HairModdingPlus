@@ -52,6 +52,10 @@ Secondary hair color is selectable with Prepare Carefully (select "Hair Color 2"
 Safe to add or remove from existing saves.
 <br><br>
 
+## Known Issues
+As of 1.3, semi-transparent portions of hair might appear significantly more transparent or significantly less transparent due to shader issues. This may cause certain hairstyles that rely on it (e.g. shaved hair) to appear wrong. No fix is possible at the moment.
+<br><br>
+
 ## How to Use
 *Note: The instructions below assume you already know how to make a regular hair mod.<br>
 If you're interested in making a hair mod and don't know where to start, check [this guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1899180537) out for more information.*
