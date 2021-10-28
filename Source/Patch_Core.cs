@@ -24,6 +24,14 @@ namespace ButterfishHairModdingPlus
 
                 string hairTexturePath = __instance.pawn.story.hairDef.texPath;
 
+                /*if (hairTexturePath.Length > 28)
+                {
+                    if (hairTexturePath.Substring(0, 28).Equals("Things/Pawn/Humanlike/Hairs/"))
+                    {
+                        return; //skip if contained in this folder structure (supposed to target only vanilla, but too ambiguous)
+                    }
+                }*/
+
                 HairColor2_Comp comp = __instance.pawn.GetComp<HairColor2_Comp>();
                 Color hairColor2 = Color.white;
                 if (comp != null)
@@ -189,21 +197,19 @@ namespace ButterfishHairModdingPlus
         //fixes issue of portraits of pawns with gradient hairs having blank portraits on pawn selection screen
         public static void PreloadCacheBugfix()
         {
-            /*
-             * for (int i = 0; i < Find.GameInitData.startingAndOptionalPawns.Count; i++)
+            
+            for (int i = 0; i < Find.GameInitData.startingAndOptionalPawns.Count; i++)
             {
                 Pawn pawn = Find.GameInitData.startingAndOptionalPawns[i];
-                PortraitsCache.Get(pawn, new Vector2(70f, 110f));
+                PortraitsCache.Get(pawn, new Vector2(70f, 110f), Rot4.South);
                 PortraitsCache.Clear();
             }
-            */
         }
 
         //fixes issue of portraits of pawns having blank portraits on first load of the game after boot
         public static void OnLoadPortraitsBugfix(ColonistBar __instance)
         {
-            /*
-             * if (HarmonyPatches_BHair.colonistBarFirstDraw)
+            if (HarmonyPatches_BHair.colonistBarFirstDraw)
             {
                 __instance.MarkColonistsDirty();
 
@@ -216,7 +222,6 @@ namespace ButterfishHairModdingPlus
                 
                 HarmonyPatches_BHair.colonistBarFirstDraw = false;
             }
-            */
         }
     }
 }
