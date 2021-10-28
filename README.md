@@ -53,7 +53,7 @@ Safe to add or remove from existing saves.
 <br><br>
 
 ## Known Issues
-As of 1.3, semi-transparent portions of hair might appear significantly more transparent or significantly less transparent due to shader issues. This may cause certain hairstyles that rely on it (e.g. shaved hair) to appear wrong. No fix is possible at the moment.
+Semi-transparent portions of hair might appear significantly more transparent or significantly less transparent due to shader issues. This may cause certain hairstyles that rely on it (e.g. shaved hair) to appear wrong. No fix is possible at the moment.
 <br><br>
 
 ## How to Use
